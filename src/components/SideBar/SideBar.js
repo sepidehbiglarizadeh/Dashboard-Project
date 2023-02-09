@@ -8,8 +8,53 @@ import {
   UserPlusIcon,
 } from "@heroicons/react/24/outline";
 import { Squares2X2Icon } from "@heroicons/react/24/solid";
-import {} from "@heroicons/react/24/outline";
 import { useState } from "react";
+import ListItem from "./ListItem/ListItem";
+
+const items = [
+  {
+    id: 1,
+    title: "داشبورد",
+    icon: <Squares2X2Icon className="icon" />,
+    number: null,
+    path: "/",
+  },
+  {
+    id: 2,
+    title: "پروفایل",
+    icon: <UserCircleIcon className="icon" />,
+    number: null,
+    path: "/profile",
+  },
+  {
+    id: 3,
+    title: "گفتگوها",
+    icon: <ChatBubbleLeftRightIcon className="icon" />,
+    number: 3,
+    path: "/chats",
+  },
+  {
+    id: 4,
+    title: "ارسال دعوت نامه",
+    icon: <EnvelopeIcon className="icon" />,
+    number: null,
+    path: "/invitation",
+  },
+  {
+    id: 5,
+    title: "صدور پیش فاکتور",
+    icon: <DocumentMinusIcon className="icon" />,
+    number: null,
+    path: "/invoice",
+  },
+  {
+    id: 6,
+    title: "عضویت در کانتمو",
+    icon: <UserPlusIcon className="icon" />,
+    number: null,
+    path: "/membership",
+  },
+];
 
 const SideBar = () => {
   const [isShow, setIsShow] = useState(false);
@@ -21,37 +66,9 @@ const SideBar = () => {
       }    transition-all duration-150 min-h-[calc(100vh_-_80px)] md:min-h-[calc(100vh_-_103px)]  bg-white  text-lg text-slate-500 shadow-sm z-10 relative`}
     >
       <ul>
-        <li className="flex items-center px-2 md:px-5 py-3 gap-x-2 ">
-          <Squares2X2Icon className="icon" />
-          <span className={`${isShow ? "" : "hidden"}`}>داشبورد</span>
-        </li>
-        <li className="flex items-center px-2 md:px-5 py-3 gap-x-2">
-          <UserCircleIcon className="icon" />
-          <span className={`${isShow ? "" : "hidden"}`}>پروفایل</span>
-        </li>
-        <li className="flex items-center px-2 md:px-5 py-3 gap-x-2 relative">
-          <ChatBubbleLeftRightIcon className="icon" />
-          <span className={`${isShow ? "" : "hidden"}`}>گفتگوها</span>
-          <san
-            className={`bg-blue-600 text-white rounded-full w-5 h-5 text-xs flex justify-center items-center ${
-              isShow ? "" : "absolute left-0"
-            }`}
-          >
-            ۳
-          </san>
-        </li>
-        <li className="flex items-center px-2 md:px-5 py-3 gap-x-2">
-          <EnvelopeIcon className="icon" />
-          <span className={`${isShow ? "" : "hidden"}`}>ارسال دعوت نامه</span>
-        </li>
-        <li className="flex items-center px-2 md:px-5 py-3 gap-x-2">
-          <DocumentMinusIcon className="icon" />
-          <span className={`${isShow ? "" : "hidden"}`}>صدور پیش فاکتور</span>
-        </li>
-        <li className="flex items-center px-5 py-3 gap-x-2">
-          <UserPlusIcon className="icon" />
-          <span className={`${isShow ? "" : "hidden"}`}>عضویت در کانتمو</span>
-        </li>
+        {items.map((item) => {
+          return <ListItem item={item} isShow={isShow} />;
+        })}
       </ul>
       <button
         className="hidden md:flex bg-white p-1  items-center justify-center border-2 rounded-full absolute top-1/2 -left-5"

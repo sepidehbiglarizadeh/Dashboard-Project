@@ -1,14 +1,17 @@
-import Navbar from "./components/Navbar/Navbar";
-import SideBar from "./components/SideBar/SideBar";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./Layout/Layout";
+import routes from "./routes";
+
 
 function App() {
   return (
-    <div className="bg-indigo-50 min-h-screen ">
-      <Navbar/>
-      <div className="relative">
-        <SideBar/>
-      </div>
-    </div>
+    <Layout>
+      <Routes>
+        {routes.map((route)=>{
+          return <Route key={Date.now()} {...route} />
+        })}
+      </Routes>
+    </Layout>
   );
 }
 
