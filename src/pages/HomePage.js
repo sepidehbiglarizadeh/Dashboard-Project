@@ -1,9 +1,11 @@
+import Information from "../components/Information/Information";
+
 const HomePage = () => {
-  return ( 
-    <div className="p-6">
-      <h2>This is Dashboard</h2>
-    </div>
-   );
-}
- 
+  return (
+    <section className="px-2 py-4 md:p-6 w-full">
+      <Information/>
+    </section>
+  );
+};
+
 export default HomePage;

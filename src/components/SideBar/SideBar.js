@@ -71,7 +71,7 @@ const SideBar = () => {
         })}
       </ul>
       <button
-        className="hidden md:flex bg-white p-1  items-center justify-center border-2 rounded-full absolute top-1/2 -left-5"
+        className="hidden md:flex bg-white p-1  items-center justify-center border-2 rounded-full absolute top-1/3 -left-5"
         onClick={() => setIsShow((prevState) => !prevState)}
       >
         {isShow ? (
