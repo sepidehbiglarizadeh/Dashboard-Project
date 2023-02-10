@@ -2,7 +2,7 @@ import { NavLink, useLocation } from "react-router-dom";
 
 const ListItem = ({ item, isShow }) => {
   const location = useLocation();
-  console.log(location);
+
   return (
     <NavLink
       to={item.path}

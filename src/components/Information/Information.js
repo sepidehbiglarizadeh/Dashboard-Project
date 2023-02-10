@@ -12,7 +12,7 @@ const Information = () => {
 
   return (
     <section
-      className={`bg-white w-full md:w-[284px]  px-6 py-7 rounded-3xl text-slate-400 relative  ${
+      className={`bg-white w-full md:w-[284px]  px-6 py-7 rounded-3xl text-slate-400 relative mb-6 md:mb-0  ${
         isShow ? "" : "h-[280px]"
       } `}
     >
