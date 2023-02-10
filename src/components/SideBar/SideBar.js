@@ -62,12 +62,12 @@ const SideBar = () => {
   return (
     <div
       className={`w-14 px-1 py-6 ${
-        isShow ? "md:w-56 px-3" : "md:w-20 "
+        isShow ? "md:w-[280px] px-3" : "md:w-20 "
       }    transition-all duration-150 min-h-[calc(100vh_-_80px)] md:min-h-[calc(100vh_-_103px)]  bg-white  text-lg text-slate-500 shadow-sm z-10 relative`}
     >
       <ul>
         {items.map((item) => {
-          return <ListItem item={item} isShow={isShow} />;
+          return <ListItem item={item} isShow={isShow} key={item.id} />;
         })}
       </ul>
       <button

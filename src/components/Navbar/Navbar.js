@@ -8,7 +8,7 @@ import MyToggle from "../MyToggle/MyToggle";
 
 const Navbar = () => {
   return (
-    <header className="w-full bg-white">
+    <header className="w-full bg-white sticky top-0 z-20">
       <nav className="p-4 md:px-11 md:py-6 flex justify-between items-center shadow-sm drop-shadow ">
         <figure className="w-[30%]">
           <img src={logo} alt="logo" />
