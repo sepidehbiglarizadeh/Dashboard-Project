@@ -57,15 +57,15 @@ const items = [
 ];
 
 const SideBar = () => {
-  const [isShow, setIsShow] = useState(false);
+  const [isShow, setIsShow] = useState(true);
 
   return (
     <div
-      className={`w-14 px-1 py-6 ${
+      className={` px-1 p-4 fixed bottom-0 right-0 left-0 bg-white  rounded-lg z-20 md:z-10 md:static border-t ${
         isShow ? "md:w-[280px] px-3" : "md:w-20 "
-      }    transition-all duration-150 min-h-[calc(100vh_-_80px)] md:min-h-[calc(100vh_-_103px)]  bg-white  text-lg text-slate-500 shadow-sm z-10 relative`}
+      }  transition-all duration-150 md:min-h-[calc(100vh_-_103px)]  bg-white  text-lg text-slate-500 shadow-sm z-10 md:relative `}
     >
-      <ul>
+      <ul className="flex justify-center items-center md:block">
         {items.map((item) => {
           return <ListItem item={item} isShow={isShow} key={item.id} />;
         })}

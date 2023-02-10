@@ -5,7 +5,7 @@ const CategoriesList = ({ category }) => {
   return (
     <section
       key={category.id}
-      className="bg-white rounded-3xl pt-8 px-6 pb-6 mb-6 md:w-max"
+      className=" rounded-3xl pt-8 px-6 pb-6 mb-6  w-full xl:w-max bg-white "
     >
       <div className="flex items-center gap-x-2 mb-6">
         <h2 className="text-blue-600 text-lg">{category.title}</h2>

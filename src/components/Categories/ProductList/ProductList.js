@@ -3,12 +3,12 @@ import { PlusCircleIcon } from "@heroicons/react/24/outline";
 
 const ProductList = ({ category }) => {
   return (
-    <div className="md:flex md:gap-x-4 md:flex-wrap">
+    <div className="lg:flex lg:gap-x-4 lg:gap-y-4 flex-wrap">
       {category.products.map((product) => {
         return <Product product={product} />;
       })}
-      <div className="flex items-center justify-between md:flex-col md:pt-28">
-        <button className="text-blue-600 flex gap-x-1 md:flex-col md:items-center md:pt-1/2">
+      <div className="flex items-center justify-end md:flex-col">
+        <button className="text-blue-600 flex gap-x-1 md:flex-col md:items-center md:pb-[50px]">
           <PlusCircleIcon className="icon" />
           <span className="text-xs">افزودن اثر</span>
         </button>

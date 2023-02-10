@@ -12,11 +12,11 @@ const ListItem = ({ item, isShow }) => {
     >
       <li
         className={`flex items-center px-2 md:px-5 py-3 gap-x-2 cursor-pointer relative hover:bg-indigo-50 hover:text-blue-600 hover:border-r-4 hover:border-blue-600 rounded-md ${
-          location.pathname === item.path ? "bg-indigo-50" : ""
+          location.pathname === item.path ? "bg-indigo-50 rounded-md" : ""
         }`}
       >
         {item.icon}
-        <span className={`${isShow ? "" : "hidden"}`}>{item.title}</span>
+        <span className={`hidden ${isShow ? "md:block" : ""}`}>{item.title}</span>
         {item.number ? (
           <span
             className={`bg-blue-600 text-white rounded-full w-5 h-5 text-xs flex justify-center items-center ${
