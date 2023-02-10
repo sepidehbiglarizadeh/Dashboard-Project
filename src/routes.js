@@ -1,4 +1,5 @@
 import ChatsPage from "./pages/ChatsPage";
+import EditPage from "./pages/EditPage";
 import HomePage from "./pages/HomePage";
 import InvitationPage from "./pages/InvitationPage";
 import InvoicePage from "./pages/InvoicPage";
@@ -12,6 +13,8 @@ const routes = [
   { path: "/invitation", element: <InvitationPage /> },
   { path: "/invoice", element: <InvoicePage /> },
   { path: "/membership", element: <MembershipPage /> },
+  { path: "/edit/:id", element: <EditPage/> },
+
 ];
 
 export default routes;

@@ -1,5 +1,6 @@
 import ProductList from "../ProductList/ProductList";
 import { PencilSquareIcon, TrashIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const CategoriesList = ({ category }) => {
   return (
@@ -9,9 +10,9 @@ const CategoriesList = ({ category }) => {
     >
       <div className="flex items-center gap-x-2 mb-6">
         <h2 className="text-blue-600 text-lg">{category.title}</h2>
-        <button>
-          <PencilSquareIcon className="icon text-slate-400" />
-        </button>
+        <Link to={`/edit/${category.id}`}  >
+          <PencilSquareIcon className="icon text-slate-400 cursor-pointer" />
+        </Link>
         <button>
           <TrashIcon className="icon text-rose-600" />
         </button>

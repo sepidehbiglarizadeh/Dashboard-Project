@@ -1,6 +1,5 @@
 import Product from "./Product/Product";
 import { PlusCircleIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
 
 const ProductList = ({ category }) => {
   return (
