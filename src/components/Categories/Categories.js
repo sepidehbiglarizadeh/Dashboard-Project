@@ -33,7 +33,7 @@ const Categories = () => {
         {loading ? <p className="text-center">در حال بارگذاری ...</p> : ""}
         {error ? <p className="text-center">{error.message}</p> : ""}
         {categories.map((category) => {
-          return <CategoriesList category={category} />;
+          return <CategoriesList key={category.id} category={category} />;
         })}
       </div>
       <button className="flex items-center gap-x-1 text-blue-600 bg-white rounded-3xl py-3 px-6">

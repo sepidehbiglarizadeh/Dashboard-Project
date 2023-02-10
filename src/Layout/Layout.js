@@ -1,16 +1,16 @@
 import Navbar from "../components/Navbar/Navbar";
 import SideBar from "../components/SideBar/SideBar";
 
-const Layout = ({children}) => {
-  return ( 
+const Layout = ({ children }) => {
+  return (
     <div className="bg-indigo-50 min-h-screen ">
-      <Navbar/>
+      <Navbar />
       <div className="relative flex">
-        <SideBar/>
+        <SideBar />
         {children}
       </div>
     </div>
-   );
-}
- 
+  );
+};
+
 export default Layout;

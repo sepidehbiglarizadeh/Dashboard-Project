@@ -1,13 +1,14 @@
 import Product from "./Product/Product";
 import { PlusCircleIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
 
 const ProductList = ({ category }) => {
   return (
     <div className="lg:flex lg:gap-x-4 lg:gap-y-4 flex-wrap">
-      {category.products.map((product) => {
-        return <Product product={product} />;
+      {category.products.slice(0, 3).map((product) => {
+        return <Product product={product} key={product.id} />;
       })}
-      <div className="flex items-center justify-end md:flex-col">
+      <div className="flex items-center justify-between md:justify-end md:flex-col">
         <button className="text-blue-600 flex gap-x-1 md:flex-col md:items-center md:pb-[50px]">
           <PlusCircleIcon className="icon" />
           <span className="text-xs">افزودن اثر</span>
