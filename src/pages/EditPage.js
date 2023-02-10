@@ -43,7 +43,10 @@ const EditPage = () => {
         >
           بروزرسانی
         </button>
-        <button className="bg-blue-600 text-white w-1/2 rounded-md py-2">
+        <button
+          className="bg-blue-600 text-white w-1/2 rounded-md py-2"
+          onClick={() => navigate("/")}
+        >
           لغو
         </button>
       </div>

@@ -13,8 +13,7 @@ const routes = [
   { path: "/invitation", element: <InvitationPage /> },
   { path: "/invoice", element: <InvoicePage /> },
   { path: "/membership", element: <MembershipPage /> },
-  { path: "/edit/:id", element: <EditPage/> },
-
+  { path: "/edit/:id", element: <EditPage /> },
 ];
 
 export default routes;
